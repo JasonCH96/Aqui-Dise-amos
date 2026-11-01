@@ -1,0 +1,63 @@
+/* Responsive corrections: contain decorative art, preserve usable controls. */
+main{overflow-x:clip}
+.ticker{width:100%;margin-left:0}
+:is(.hero-copy,.studio-copy,.service-list,.desk-controls,.design-board,.contact-copy,.contact-layout>form,.form-row>label){min-width:0}
+.contact-star{right:10px}
+.header nav .mobile-contact{display:none}
+@media(max-width:1100px) and (min-width:801px){.contact-star{right:10px}}
+@media(max-width:800px){
+  .header nav .mobile-contact{display:block}
+  .menu{width:44px;height:44px;flex:0 0 44px;align-items:center}
+  .header nav a{min-height:44px;display:flex;align-items:center}
+  .hero-art{margin-top:16px}
+  .art-tabs button{min-height:44px;font-size:12px}
+  .play-link{min-height:44px;font-size:11px}
+  .palette-options button,.composition-options button{min-height:44px;font-size:11px;overflow-wrap:anywhere}
+  .remix-button,.download-art{min-height:44px;font-size:12px}
+  .contact input,.contact select,.contact textarea{font-size:16px;min-height:48px}
+  .contact label{font-size:13px}
+  .form-notice{font-size:12px}
+  .desk-status{font-size:10px}
+  #motion-toggle{min-height:44px;font-size:11px}
+  .contact-star{right:10px}
+}
+@media(max-width:600px){
+  .studio-composition{display:flex;flex-direction:column;gap:30px}
+  .studio-copy{width:100%;order:1}
+  .studio-copy h2{font-size:clamp(42px,11.5vw,69px)}
+  .studio-copy>p:not(.eyebrow){font-size:14px}
+  .studio-copy .text-link{font-size:12px}
+  .studio-visual{width:100%;min-height:0;aspect-ratio:1;order:2}
+  .studio-visual img{width:150%;left:-24%;height:100%;top:0}
+  .services-layout{display:flex;flex-direction:column;gap:28px}
+  .service-stage{min-height:0;height:230px;width:100%;overflow:hidden}
+  .service-stage>img{width:115%;left:-7%;object-fit:cover}
+  .service-stage-draft{inset:9% 18%}
+  .service-stage-code{top:0;left:5%}
+  .service-stage-name{left:5%;bottom:4%;max-width:100%}
+  .desk-controls{display:block}
+  .service-detail p,.process-grid p{font-size:13px}
+  .service-detail a{font-size:12px}
+  .contact-copy h2{font-size:19.8vw}
+  .contact-star{font-size:48px;right:10px}
+}
+@media(max-width:480px){
+  .hero-description{font-size:14px}
+  .hero-actions{flex-wrap:wrap;gap:12px 18px}
+  .hero-actions .button{font-size:12px;min-height:48px}
+  .play-link{font-size:11px;max-width:none}
+  .hero-bottom>.micro{font-size:8px}
+  .art-tabs button{font-size:11px;padding:10px 5px}
+  .desk-controls{padding:20px}
+  .control-hint,.range-label,legend{font-size:12px}
+  .desk-controls>.text-link{font-size:11px}
+  .desk-footnote{font-size:9px;max-width:none}
+  .process-grid h3{font-size:22px;overflow-wrap:anywhere}
+  .process-grid .micro,.footer-bottom{font-size:8px}
+  .form-row{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:400px){
+  .header-cta{display:none}
+  .header .logo{width:160px}
+  .menu{margin-left:auto}
+}
